@@ -64,6 +64,7 @@ Completed (for learning purposes)
 - Making trending songs clickable
 - Connecting trending cards to the main audio player
 - Enhancing overall interactivity and state handling
+- Not Responsive need to work on that
 
 ---
 
