@@ -28,3 +28,12 @@
     color: white;
     text-decoration: none;
 }
+
+.disclaimer {
+    font-size: 11px;
+    color: #b3b3b3;
+    opacity: 0.6;   
+    line-height: 1.4;
+    margin: 5px 0 6px 0;
+}
+
