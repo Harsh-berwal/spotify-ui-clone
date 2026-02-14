@@ -7,9 +7,9 @@ The project was created to practice JavaScript logic, DOM manipulation, and buil
 
 ## 🛠 Tech Stack
 
-- HTML  
-- CSS  
-- JavaScript  
+- HTML
+- CSS
+- JavaScript
 
 ---
 
@@ -27,25 +27,12 @@ The project was created to practice JavaScript logic, DOM manipulation, and buil
 
 ## ✨ Features
 
-- 🔍 **Search Songs**
-  - Search songs using the song name or artist/creator name.
-
-- ▶️ **Play & Pause**
-  - Play and pause songs using the main control button.
-
-- ⏭ **Next & Previous**
-  - Navigate between songs using next and previous controls.
-
-- 📂 **Add Custom Songs**
-  - You can add your own songs by placing `.mp3` files inside the `songs` folder.
-  - Update `service.js` using the format:
-    ```
-    "Song Name - Artist Name.mp3"
-    ```
-  - The song will automatically appear in the UI and can be played.
-
-- 🎵 **Dynamic Song List**
-  - Songs are loaded dynamically using JavaScript instead of being hardcoded in HTML.
+- Music streaming–style user interface
+- Search songs by song name or artist name
+- Play and pause audio tracks
+- Next and previous song controls
+- Dynamically loaded song list using JavaScript
+- Ability to add custom songs through the `songs` folder
 
 ---
 
@@ -55,21 +42,8 @@ Completed (for learning purposes)
 
 ---
 
-## 🚧 Limitations / Future Improvements
+## ⚠️ Disclaimer
 
-- The **Trending Songs** section currently contains UI cards only.
-- These cards do not have any functionality yet and are used mainly for layout and styling practice.
-- Possible improvements include:
-  - Adding click-to-play functionality for trending cards
-  - Connecting trending songs directly to the player
-  - Improving state management and UI interactions
-
----
-
-## 🔧 Song Configuration (Developer Notes)
-
-Songs are dynamically loaded from the `service.js` file.
-
-To add new songs:
-1. Place the `.mp3` file inside the `songs` folder.
-2. Add the song name in `service.js` using the format:
+This project is created only for educational purposes.  
+It is not affiliated with Spotify or any music streaming service.  
+No login, no data collection, and no user information is stored.
