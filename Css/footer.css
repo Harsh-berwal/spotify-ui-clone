@@ -1,0 +1,30 @@
+.footer {
+    display: flex;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 90px;
+    left: 20px;
+    width: calc(100% - 40px);
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer a {
+    color: rgb(179, 179, 179);
+    text-decoration: none;
+}
+
+.cookie {
+    display: flex;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 60px;
+    left: 20px;
+}
+
+.cookie a {
+    color: white;
+    text-decoration: none;
+}

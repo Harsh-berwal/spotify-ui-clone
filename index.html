@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+
+    <link rel="stylesheet" href="Css/utility.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/player.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/scrollbar.css">
+
+    <link rel="icon" type="image/png" href="icon/favicon.ico">
+
+</head>
+
+<body>
+
+    <div class="top flex bg-black">
+        <div class="home">
+            <ul>
+                <div class="logo invert">
+                    <img src="icon/logo.svg" alt="Spotify">
+                </div>
+
+                <li>
+                    <div class="icon-circle">
+                        <img class="invert" src="icon/home.svg" alt="Home">
+                    </div>
+                </li>
+
+                <li>
+                    <div class="search-bar flex text-centre">
+                        <img class="invert icon" src="icon/search.svg" alt="Search">
+                        <input type="text" placeholder="What do you want to play?" class="search-input" />
+                        <div class="divider"></div>
+                        <img src="icon/search-extra.svg" class="icon invert" alt="stack icon" />
+                    </div>
+                </li>
+            </ul>
+
+            <div class="right-header">
+
+                <div class="box">
+                    <a class="hover" href="">Premium</a>
+                    <a class="hover" href="">Support</a>
+                    <a class="hover" href="">Download</a>
+                </div>
+
+                <div class="second-divider"></div>
+
+                <div class="box2">
+
+                    <div class="app pointer">
+                        <img class="invert" src="icon/download.svg" alt="">
+                        <p class="hover-2">Install App</p>
+                    </div>
+
+                    <div class="sign pointer">
+                        <p>Sign up</p>
+                    </div>
+
+                    <div class="login">
+                        <button class="pointer">Log in</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="left">
+
+            <div class="library bg-black">
+
+                <div class="header">
+                    <h2>Your Library</h2>
+                    <img class="invert" src="icon/plus-icon.svg" alt="plus icon">
+                </div>
+
+                <div class="song-list">
+                    <ul></ul>
+                </div>
+
+                <div class="footer">
+                    <div><a href="https://www.spotify.com/jp/legal/"><span>Legal</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/privacy/"><span>Safety & Privacy Centre</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/"><span>Privacy Policy</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/legal/cookies-policy/"><span>Cookies</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/#s3"><span>About Ads</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/accessibility/"><span>Accessibility</span></a></div>
+                </div>
+
+                <div class="cookie">
+                    <a href="">Cookies</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="spotify-playlist">
+
+                <h2 class="section-title">Trending Songs</h2>
+
+                <div class="trending-row">
+
+                    <div class="trending-card">
+                        <div class="trending-image">
+                            <img src="images/Espresso.png" alt="Espresso">
+                            <div class="trending-play">▶</div>
+                        </div>
+                        <h4>Espresso</h4>
+                        <p>Sabrina Carpenter</p>
+                    </div>
+
+                    <div class="trending-card">
+                        <div class="trending-image">
+                            <img src="images/Gata Only.png" alt="Gata Only">
+                            <div class="trending-play">▶</div>
+                        </div>
+                        <h4>Gata Only</h4>
+                        <p>FloyyMenor & Cris MJ</p>
+                    </div>
+
+                    <div class="trending-card">
+                        <div class="trending-image">
+                            <img src="images/Hass Hass.png" alt="Hass Hass">
+                            <div class="trending-play">▶</div>
+                        </div>
+                        <h4>Hass Hass</h4>
+                        <p>Diljit Dosanjh & Sia</p>
+                    </div>
+
+                </div>
+
+                <div class="recent-list">
+
+                    <div class="recent-item">
+                        <img src="images/Espresso.png" alt="">
+                        <div>
+                            <h4>Espresso</h4>
+                            <p>Sabrina Carpenter</p>
+                        </div>
+                        <span class="recent-play">▶</span>
+                    </div>
+
+                    <div class="recent-item">
+                        <img src="images/Kings & Queens.png" alt="">
+                        <div>
+                            <h4>Kings & Queens</h4>
+                            <p>Ava Max</p>
+                        </div>
+                        <span class="recent-play">▶</span>
+                    </div>
+
+                </div>
+
+                <div class="playbar">
+                    <div class="song-info" style="display: none;"></div>
+
+                    <div class="playbar-top">
+                        <div class="song-time-left">00:00</div>
+                        <div class="seekbar">
+                            <div class="seekbar-progress"></div>
+                            <div class="seekbar-circle"></div>
+                        </div>
+                        <div class="song-time-right">00:00</div>
+                    </div>
+
+                    <div class="song-buttons">
+                        <img id="previous" class="invert" src="icon/song-prev.svg" alt="Previous">
+                        <img id="play" class="invert play-pause-button" src="icon/play.svg" alt="Play/Pause">
+                        <img id="next" class="invert" src="icon/song-next.svg" alt="Next">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="script.js"></script> -->
+    <script type="module" src="js/main.js"></script>
+
+</body>
+
+</html>
