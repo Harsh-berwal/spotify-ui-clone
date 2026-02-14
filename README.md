@@ -39,9 +39,14 @@ The project was created to practice JavaScript logic, DOM manipulation, and buil
 
 1. Add the `.mp3` file to the `songs` folder.
 2. Open the `service.js` file.
-3. Add the song name using the format:
-![Adding songs using service.js](./screenshots/add-songs.png)
+3. Add the song name using the format.
 4. The song will automatically appear in the UI and can be played.
+
+<br>
+
+**Example – Adding a song in `service.js`:**
+
+![Adding songs using service.js](./screenshots/add-songs.png)
 
 ---
 
@@ -76,7 +81,8 @@ No login, no data collection, and no user information is stored.
 
 ---
 
-## 📸 Project Preview
+### 🎧 Music Player UI
 
 ![Music Player UI Preview](./screenshots/ui-preview.png)
+
 
