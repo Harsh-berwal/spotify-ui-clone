@@ -5,6 +5,7 @@ export async function getSongs() {
         "Hass Hass - Diljit Dosanjh & Sia.mp3",
         "Kings & Queens - Ava Max.mp3",
         "Na Ja - Pav Dharia.mp3",
-        "Ghungroo - Arijit Singh & Shilpa Rao.mp3"
+        "Ghungroo - Arijit Singh & Shilpa Rao.mp3",
+        "HEAVENLY JUMPSTYLE.mp3"
     ];
 }
