@@ -1,52 +1,48 @@
-.right-header {
-    display: flex;
-}
-
 .right {
-    width: 75vw;
-    background-color: #202020;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 0;
+    background-color: var(--surface-3);
     color: white;
-    border-radius: 7px;
-    max-height: 78vh;
-    overflow-y: hidden;
-    padding-bottom: 90px;
+    border-radius: 1rem;
+    padding: clamp(0.875rem, 1.4vw, 1.25rem);
     position: relative;
 }
 
 .spotify-playlist {
-    margin: 25px 37px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 0;
+    width: 100%;
+    max-width: 70rem;
+    margin: 0 auto;
 }
 
 .section-title {
-    font-size: 24px;
+    font-size: clamp(1rem, 0.9rem + 0.55vw, 1.5rem);
     font-weight: 700;
-    margin: 25px 0 15px;
+    margin: 0;
 }
 
 .trending-row {
-    display: flex;
-    gap: 18px;
-    overflow-x: auto;
-    padding-bottom: 20px;
-    scroll-behavior: smooth;
-}
-
-.trending-row::-webkit-scrollbar {
-    height: 8px;
-}
-
-.trending-row::-webkit-scrollbar-thumb {
-    background: #535353;
-    border-radius: 4px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 0.875rem;
 }
 
 .trending-card {
     background: #1f1f1f;
-    border-radius: 10px;
-    padding: 12px;
-    width: 180px;
-    flex-shrink: 0;
+    border-radius: 1rem;
+    padding: 0.75rem;
+    width: auto;
+    min-width: 0;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    min-height: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -59,7 +55,7 @@
     width: 100%;
     aspect-ratio: 1 / 1;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 0.85rem;
     position: relative;
 }
 
@@ -72,17 +68,17 @@
 
 .trending-play {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
-    width: 45px;
-    height: 45px;
+    bottom: 0.625rem;
+    right: 0.625rem;
+    width: 2.5rem;
+    height: 2.5rem;
     background-color: #1ed760;
     color: black;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 0.95rem;
     opacity: 0;
     transform: translateY(10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -94,8 +90,8 @@
 }
 
 .trending-card h4 {
-    margin: 10px 0 4px;
-    font-size: 15px;
+    margin: 0;
+    font-size: clamp(0.85rem, 0.8rem + 0.12vw, 0.95rem);
     font-weight: 700;
     white-space: nowrap;
     overflow: hidden;
@@ -103,7 +99,7 @@
 }
 
 .trending-card p {
-    font-size: 13px;
+    font-size: clamp(0.75rem, 0.72rem + 0.08vw, 0.85rem);
     color: #b3b3b3;
     white-space: nowrap;
     overflow: hidden;
@@ -112,10 +108,9 @@
 
 /* RECENT */
 .recent-list {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 0.75rem;
 }
 
 .recent-item {
@@ -123,10 +118,11 @@
     align-items: center;
     gap: 12px;
     background: #1a1a1a;
-    padding: 10px 12px;
-    border-radius: 8px;
+    padding: 0.75rem;
+    border-radius: 0.85rem;
     cursor: pointer;
     transition: background-color 0.2s ease;
+    min-width: 0;
 }
 
 .recent-item:hover {
@@ -134,19 +130,19 @@
 }
 
 .recent-item img {
-    width: 48px;
-    height: 48px;
-    border-radius: 6px;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 0.5rem;
     object-fit: cover;
 }
 
 .recent-item h4 {
-    font-size: 15px;
+    font-size: clamp(0.85rem, 0.8rem + 0.12vw, 0.95rem);
     margin: 0;
 }
 
 .recent-item p {
-    font-size: 13px;
+    font-size: clamp(0.75rem, 0.72rem + 0.08vw, 0.85rem);
     color: #b3b3b3;
     margin: 0;
 }
@@ -165,24 +161,26 @@
 
 /* CARDS */
 .card-container {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    max-height: 720px;
-    overflow-y: auto;
-    padding-right: 37px;
-    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 0.75rem;
+    max-height: none;
+    overflow: visible;
+    padding-right: 0;
+    padding-bottom: 0;
 }
 
 .card {
-    width: 170px;
+    width: auto;
+    min-width: 0;
     background-color: #252525;
-    border-radius: 5px;
-    padding: 9px;
-    padding-top: 15px;
+    border-radius: 0.85rem;
+    padding: 0.75rem;
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
     transition: background-color 0.3s ease;
 }
 
@@ -191,28 +189,29 @@
 }
 
 .card>* {
-    padding-top: 5px;
+    padding-top: 0.25rem;
 }
 
 .card p {
     flex-wrap: wrap;
-    font-size: 12px;
+    font-size: clamp(0.72rem, 0.68rem + 0.08vw, 0.82rem);
     color: #b3b3aa;
 }
 
 .card img {
     width: 100%;
+    aspect-ratio: 1 / 1;
     object-fit: contain;
-    border-radius: 9px;
+    border-radius: 0.85rem;
     display: block;
 }
 
 .play {
     position: absolute;
-    height: 45px;
-    width: 45px;
-    right: 9px;
-    bottom: 95px;
+    height: 2.5rem;
+    width: 2.5rem;
+    right: 0.625rem;
+    bottom: clamp(3.75rem, 32%, 5rem);
     transform: translateY(100%);
     opacity: 0;
     transition: transform 0.3s ease-out, opacity 0.3s ease-out;
@@ -243,4 +242,75 @@
 
 .play:hover {
     transform: scale(1.05) translateY(-30%);
+}
+
+@media (min-width: 48rem) {
+    .right {
+        padding: clamp(0.875rem, 1.3vw, 1.25rem);
+    }
+
+    .trending-row {
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
+}
+
+@media (min-width: 62rem) {
+    .right {
+        gap: 1rem;
+    }
+
+    .trending-row {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 220px));
+        justify-content: start;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 220px));
+        justify-content: start;
+    }
+
+    .trending-card,
+    .card {
+        max-width: 220px;
+    }
+}
+
+@media (min-width: 75rem) {
+    .right {
+        padding: 1.25rem;
+    }
+
+    .trending-row {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 220px));
+    }
+}
+
+@media (min-width: 87.5rem) {
+    .trending-row,
+    .card-container {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 220px));
+    }
+}
+
+@media (max-width: 47.9375rem) {
+    .spotify-playlist {
+        max-width: none;
+    }
+
+    .trending-row,
+    .card-container {
+        grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    }
+
+    .recent-list {
+        grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    }
+}
+
+@media (max-width: 23.4375rem) {
+    .trending-row,
+    .card-container,
+    .recent-list {
+        grid-template-columns: repeat(auto-fit, minmax(8.75rem, 1fr));
+    }
 }

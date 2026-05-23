@@ -21,41 +21,45 @@
 
 <body>
 
-    <div class="top flex bg-black">
-        <div class="home">
-            <ul>
-                <div class="logo invert">
+    <div class="app-shell">
+
+        <header class="top bg-black">
+            <div class="home">
+                <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false"
+                    aria-controls="sidebar-panel">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <a class="logo invert" href="#" aria-label="Spotify home">
                     <img src="icon/logo.svg" alt="Spotify">
+                </a>
+
+                <button class="icon-circle home-button pointer" type="button" aria-label="Home">
+                    <img class="invert" src="icon/home.svg" alt="">
+                </button>
+
+                <button class="mobile-login pointer" type="button">Log in</button>
+
+                <div class="search-bar flex text-centre" role="search">
+                    <img class="invert icon" src="icon/search.svg" alt="Search">
+                    <input type="text" placeholder="What do you want to play?" class="search-input" />
+                    <div class="divider"></div>
+                    <img src="icon/search-extra.svg" class="icon invert" alt="stack icon" />
                 </div>
 
-                <li>
-                    <div class="icon-circle">
-                        <img class="invert" src="icon/home.svg" alt="Home">
-                    </div>
-                </li>
+                <div class="mobile-search-results" hidden aria-live="polite"></div>
+            </div>
+        </header>
 
-                <li>
-                    <div class="search-bar flex text-centre">
-                        <img class="invert icon" src="icon/search.svg" alt="Search">
-                        <input type="text" placeholder="What do you want to play?" class="search-input" />
-                        <div class="divider"></div>
-                        <img src="icon/search-extra.svg" class="icon invert" alt="stack icon" />
-                    </div>
-                </li>
-            </ul>
+        <div class="container">
 
-            <div class="right-header">
+            <aside class="left" id="sidebar-panel">
 
-                <div class="box">
-                    <a class="hover" href="">Premium</a>
-                    <a class="hover" href="">Support</a>
-                    <a class="hover" href="">Download</a>
-                </div>
+            <div class="library bg-black">
 
-                <div class="second-divider"></div>
-
-                <div class="box2">
-
+                <div class="sidebar-actions">
                     <div class="app pointer">
                         <img class="invert" src="icon/download.svg" alt="">
                         <p class="hover-2">Install App</p>
@@ -64,22 +68,7 @@
                     <div class="sign pointer">
                         <p>Sign up</p>
                     </div>
-
-                    <div class="login">
-                        <button class="pointer">Log in</button>
-                    </div>
-
                 </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-
-        <div class="left">
-
-            <div class="library bg-black">
 
                 <div class="header">
                     <h2>Your Library</h2>
@@ -90,29 +79,31 @@
                     <ul></ul>
                 </div>
 
-                <div class="footer">
-                    <div><a href="https://www.spotify.com/jp/legal/"><span>Legal</span></a></div>
-                    <div><a href="https://www.spotify.com/jp/privacy/"><span>Safety & Privacy Centre</span></a></div>
-                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/"><span>Privacy Policy</span></a>
+                <div class="sidebar-bottom">
+                    <div class="footer">
+                        <div><a href="https://www.spotify.com/jp/legal/"><span>Legal</span></a></div>
+                        <div><a href="https://www.spotify.com/jp/privacy/"><span>Safety & Privacy Centre</span></a></div>
+                        <div><a href="https://www.spotify.com/jp/legal/privacy-policy/"><span>Privacy Policy</span></a>
+                        </div>
+                        <div><a href="https://www.spotify.com/jp/legal/cookies-policy/"><span>Cookies</span></a></div>
+                        <div><a href="https://www.spotify.com/jp/legal/privacy-policy/#s3"><span>About Ads</span></a></div>
+                        <div><a href="https://www.spotify.com/jp/accessibility/"><span>Accessibility</span></a></div>
                     </div>
-                    <div><a href="https://www.spotify.com/jp/legal/cookies-policy/"><span>Cookies</span></a></div>
-                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/#s3"><span>About Ads</span></a></div>
-                    <div><a href="https://www.spotify.com/jp/accessibility/"><span>Accessibility</span></a></div>
-                </div>
 
-                <div class="disclaimer">
-                    Educational UI demo project inspired by music streaming apps.
-                    Not affiliated with Spotify. No login, no data collection.
-                </div>
+                    <div class="disclaimer">
+                        Educational UI demo project inspired by music streaming apps.
+                        Not affiliated with Spotify. No login, no data collection.
+                    </div>
 
-                <div class="cookie">
-                    <a href="">Cookies</a>
+                    <div class="cookie">
+                        <a href="">Cookies</a>
+                    </div>
                 </div>
             </div>
-        </div>
+            </aside>
 
 
-        <div class="right">
+            <main class="right">
             <div class="spotify-playlist">
 
                 <h2 class="section-title">Trending Songs</h2>
@@ -190,7 +181,11 @@
                 </div>
 
             </div>
+            </main>
+
         </div>
+
+        <div class="sidebar-backdrop" hidden></div>
     </div>
 
     <script type="module" src="js/main.js"></script>

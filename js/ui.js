@@ -46,6 +46,45 @@ export function displaySongs(songs) {
     });
 }
 
+export function renderMobileSearchResults(songs, query = "") {
+    const panel = document.querySelector(".mobile-search-results");
+    if (!panel) return;
+
+    const trimmedQuery = query.trim();
+    panel.innerHTML = "";
+
+    if (!trimmedQuery) {
+        panel.hidden = true;
+        panel.classList.remove("is-visible");
+        return;
+    }
+
+    if (!songs.length) {
+        panel.innerHTML = '<div class="search-result-item"><div class="search-result-text"><h4>No results found</h4><p>Try a different song or artist</p></div></div>';
+        panel.hidden = false;
+        panel.classList.add("is-visible");
+        return;
+    }
+
+    songs.forEach((file, index) => {
+        const { song, artist } = parseSongAndArtist(file);
+        const item = document.createElement("div");
+        item.className = "search-result-item";
+        item.innerHTML = `
+            <img src="${ICONS.music}" alt="${song}">
+            <div class="search-result-text">
+                <h4>${song}</h4>
+                <p>${artist}</p>
+            </div>
+        `;
+        item.onclick = () => playMusic(index);
+        panel.appendChild(item);
+    });
+
+    panel.hidden = false;
+    panel.classList.add("is-visible");
+}
+
 export function renderTrending() {
     const row = document.querySelector(".trending-row");
     if (!row) return;
