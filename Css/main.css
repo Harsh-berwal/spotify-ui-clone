@@ -1,0 +1,246 @@
+.right-header {
+    display: flex;
+}
+
+.right {
+    width: 75vw;
+    background-color: #202020;
+    color: white;
+    border-radius: 7px;
+    max-height: 78vh;
+    overflow-y: hidden;
+    padding-bottom: 90px;
+    position: relative;
+}
+
+.spotify-playlist {
+    margin: 25px 37px;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 25px 0 15px;
+}
+
+.trending-row {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scroll-behavior: smooth;
+}
+
+.trending-row::-webkit-scrollbar {
+    height: 8px;
+}
+
+.trending-row::-webkit-scrollbar-thumb {
+    background: #535353;
+    border-radius: 4px;
+}
+
+.trending-card {
+    background: #1f1f1f;
+    border-radius: 10px;
+    padding: 12px;
+    width: 180px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trending-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.trending-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+}
+
+.trending-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.trending-play {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 45px;
+    height: 45px;
+    background-color: #1ed760;
+    color: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.trending-card:hover .trending-play {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.trending-card h4 {
+    margin: 10px 0 4px;
+    font-size: 15px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.trending-card p {
+    font-size: 13px;
+    color: #b3b3b3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* RECENT */
+.recent-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 15px;
+}
+
+.recent-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #1a1a1a;
+    padding: 10px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.recent-item:hover {
+    background-color: #282828;
+}
+
+.recent-item img {
+    width: 48px;
+    height: 48px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.recent-item h4 {
+    font-size: 15px;
+    margin: 0;
+}
+
+.recent-item p {
+    font-size: 13px;
+    color: #b3b3b3;
+    margin: 0;
+}
+
+.recent-play {
+    margin-left: auto;
+    color: #1ed760;
+    font-size: 18px;
+    opacity: 0.8;
+    transition: transform 0.2s ease;
+}
+
+.recent-item:hover .recent-play {
+    transform: scale(1.15);
+}
+
+/* CARDS */
+.card-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-height: 720px;
+    overflow-y: auto;
+    padding-right: 37px;
+    padding-bottom: 20px;
+}
+
+.card {
+    width: 170px;
+    background-color: #252525;
+    border-radius: 5px;
+    padding: 9px;
+    padding-top: 15px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.card:hover {
+    background-color: #303030;
+}
+
+.card>* {
+    padding-top: 5px;
+}
+
+.card p {
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: #b3b3aa;
+}
+
+.card img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 9px;
+    display: block;
+}
+
+.play {
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    right: 9px;
+    bottom: 95px;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    color: #1ed760;
+}
+
+.play svg {
+    width: 100%;
+    height: 100%;
+}
+
+.play svg path {
+    transform: translateX(2px);
+    transform-origin: center;
+}
+
+.card .play.show {
+    transform: translateY(-10%);
+    opacity: 1;
+}
+
+.play:hover {
+    transform: scale(1.05) translateY(-30%);
+}
