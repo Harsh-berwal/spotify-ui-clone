@@ -91,6 +91,14 @@ html {
     margin: 0 auto;
 }
 
+@media (min-width: 64rem) {
+    .app-shell {
+        width: 96vw;
+        max-width: 1800px;
+        margin: 0 auto;
+    }
+}
+
 .sidebar-backdrop {
     position: fixed;
     inset: 0;

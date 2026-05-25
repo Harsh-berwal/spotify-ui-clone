@@ -349,8 +349,18 @@
 }
 
 @media (min-width: 64rem) {
+    .right {
+        gap: 1rem;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        min-height: calc(100vh - 5.5rem);
+    }
+
     .spotify-playlist {
         gap: 1.25rem;
+        flex: 1 1 auto;
+        min-height: 0;
     }
 
     .section-title {
@@ -360,6 +370,35 @@
     .trending-row,
     .card-container,
     .recent-list {
-        gap: 1rem;
+        gap: 24px;
+        grid-template-columns: repeat(auto-fill, minmax(170px, 180px));
+        justify-content: start;
+    }
+
+    .trending-card,
+    .card {
+        padding: 0.75rem;
+        max-width: 180px;
+    }
+
+    .trending-image img,
+    .card img {
+        aspect-ratio: 1 / 1;
+    }
+
+    .card img {
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+    }
+
+    .playbar {
+        position: static;
+        margin-top: auto;
+        height: auto;
+        max-height: 100px;
+        min-height: 90px;
+        width: 100%;
+        padding: 0.75rem 0.875rem;
     }
 }

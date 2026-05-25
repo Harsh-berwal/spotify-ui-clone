@@ -373,6 +373,44 @@ body.sidebar-open .nav-toggle span:nth-child(3) {
     }
 }
 
+@media (min-width: 64rem) {
+    .top {
+        padding: 16px 16px 0;
+    }
+
+    .home {
+        height: 72px;
+        flex-wrap: nowrap;
+        gap: 0.75rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .logo img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .icon-circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .search-bar {
+        height: 48px;
+        border-radius: 24px;
+        flex: 1 1 auto;
+        padding: 0 0.875rem;
+    }
+
+    .search-bar input {
+        font-size: 0.95rem;
+    }
+
+    .right-header {
+        gap: 0.5rem;
+    }
+}
+
 @media (max-width: 23.4375rem) {
     .top {
         padding-inline: 0.75rem;
