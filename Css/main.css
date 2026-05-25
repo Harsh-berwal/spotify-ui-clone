@@ -16,7 +16,6 @@
     gap: 1rem;
     min-width: 0;
     width: 100%;
-    max-width: 70rem;
     margin: 0 auto;
 }
 
@@ -259,19 +258,30 @@
         gap: 1rem;
     }
 
+    .spotify-playlist {
+        flex: 1 1 auto;
+        min-height: 100%;
+        max-width: none;
+        margin: 0;
+    }
+
+    .playbar {
+        margin-top: auto;
+    }
+
     .trending-row {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 220px));
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         justify-content: start;
     }
 
     .card-container {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 220px));
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         justify-content: start;
     }
 
     .trending-card,
     .card {
-        max-width: 220px;
+        max-width: none;
     }
 }
 
@@ -281,14 +291,14 @@
     }
 
     .trending-row {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 220px));
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     }
 }
 
 @media (min-width: 87.5rem) {
     .trending-row,
     .card-container {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 220px));
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     }
 }
 
@@ -335,5 +345,21 @@
     .card-container,
     .recent-list {
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+}
+
+@media (min-width: 64rem) {
+    .spotify-playlist {
+        gap: 1.25rem;
+    }
+
+    .section-title {
+        font-size: clamp(1.1rem, 0.95rem + 0.6vw, 1.6rem);
+    }
+
+    .trending-row,
+    .card-container,
+    .recent-list {
+        gap: 1rem;
     }
 }

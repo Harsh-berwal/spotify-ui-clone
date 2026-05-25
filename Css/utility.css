@@ -86,7 +86,8 @@ html {
 }
 
 .app-shell {
-    width: min(100%, 87.5rem);
+    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
 }
 
