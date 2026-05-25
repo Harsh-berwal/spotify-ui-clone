@@ -279,13 +279,13 @@ body.sidebar-open .nav-toggle span:nth-child(3) {
     color: white;
 }
 
-.app {
+.right-header .app {
     display: none;
     gap: 0.5rem;
     align-items: center;
 }
 
-.app img {
+.right-header .app img {
     height: 0.95rem;
     width: 0.95rem;
 }

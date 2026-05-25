@@ -67,44 +67,60 @@ body.sidebar-open .left {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.sidebar-actions .app,
-.sidebar-actions .sign {
+.sidebar-actions .sidebar-action,
+.sidebar-actions .sidebar-action-login button {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 2.5rem;
+    width: 100%;
+    min-height: 42px;
+    height: 42px;
     padding: 0 0.75rem;
-    border-radius: 0.875rem;
+    border-radius: 12px;
+    box-sizing: border-box;
     border: 1px solid transparent;
-    background: rgba(255, 255, 255, 0.03);
+    background: #1f1f1f;
+    color: #ffffff;
     text-align: center;
     transition: border-color 0.25s ease, background-color 0.25s ease, transform 0.2s ease;
 }
 
-.sidebar-actions .app {
+.sidebar-actions .sidebar-action-app {
     gap: 0.5rem;
 }
 
-.sidebar-actions .app img {
+.sidebar-actions .sidebar-action-app img {
     width: 0.95rem;
     height: 0.95rem;
 }
 
-.sidebar-actions .sign p {
+.sidebar-actions .sidebar-action-sign p {
     margin: 0;
 }
 
-.sidebar-actions .login {
+.sidebar-actions .sidebar-action-login {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.sidebar-actions .app:hover,
-.sidebar-actions .sign:hover {
-    border-color: rgba(255, 255, 255, 0.4);
-    background-color: rgba(255, 255, 255, 0.05);
+.sidebar-actions .sidebar-action:hover {
+    border-color: rgba(255, 255, 255, 0.25);
+    background-color: #2a2a2a;
     transform: translateY(-1px);
+}
+
+.sidebar-actions .sidebar-action-login button {
+    border: none;
+    background: #ffffff;
+    color: #000000;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.sidebar-actions .sidebar-action-login button:hover {
+    background: #f2f2f2;
+    transform: scale(1.02);
 }
 
 .sidebar-bottom {
@@ -152,63 +168,33 @@ body.sidebar-open .left {
         margin-top: 0.125rem;
     }
 
-    .sidebar-actions .app,
-    .sidebar-actions .sign,
-    .sidebar-actions .login,
-    .sidebar-actions .login button {
+    .sidebar-actions .sidebar-action,
+    .sidebar-actions .sidebar-action-login button {
         width: 100%;
     }
 
-    .sidebar-actions .app,
-    .sidebar-actions .sign,
-    .sidebar-actions .login button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-sizing: border-box;
-        min-height: 42px;
-        height: 42px;
-        padding: 0 0.75rem;
-        border-radius: 12px;
-        border: 1px solid transparent;
-        background: rgba(255, 255, 255, 0.03);
-        color: inherit;
-        text-align: center;
-        transition: border-color 0.25s ease, background-color 0.25s ease, transform 0.2s ease;
-    }
-
-    .sidebar-actions .app {
+    .sidebar-actions .sidebar-action-app {
         gap: 0.5rem;
     }
 
-    .sidebar-actions .app img {
+    .sidebar-actions .sidebar-action-app img {
         width: 1rem;
         height: 1rem;
         flex-shrink: 0;
     }
 
-    .sidebar-actions .sign p {
+    .sidebar-actions .sidebar-action-sign p {
         margin: 0;
     }
 
-    .sidebar-actions .login {
+    .sidebar-actions .sidebar-action-login {
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-
-    .sidebar-actions .login button {
-        font: inherit;
-        font-weight: inherit;
-        cursor: pointer;
-    }
-
-    .sidebar-actions .app:hover,
-    .sidebar-actions .sign:hover,
-    .sidebar-actions .login button:hover {
-        border-color: rgba(255, 255, 255, 0.4);
-        background-color: rgba(255, 255, 255, 0.05);
-        transform: translateY(-1px);
+        padding: 0;
+        background: transparent;
+        border-color: transparent;
+        overflow: hidden;
     }
 
     .sidebar-bottom {
