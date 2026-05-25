@@ -62,8 +62,8 @@ body.sidebar-open .nav-toggle span:nth-child(3) {
 .icon-circle {
     background-color: #1f1f1f;
     border-radius: 50%;
-    width: 2.25rem;
-    height: 2.25rem;
+    width: 2.3rem;
+    height: 2.3rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -520,21 +520,26 @@ body.sidebar-open .nav-toggle span:nth-child(3) {
 
     .home {
         padding: 0.4rem 0.5rem;
-        gap: 0.4rem 0.5rem;
+        gap: 0.35rem 0.4rem;
     }
 
     .nav-toggle,
     .icon-circle {
-        width: 2.75rem;
-        height: 2.75rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .logo img {
+        width: 2.25rem;
+        height: 2.25rem;
     }
 
     .mobile-login {
         display: inline-flex;
-        min-height: 2.75rem;
-        height: 2.75rem;
+        min-height: 2.25rem;
+        height: 2.25rem;
         padding: 0 1rem;
-        font-size: 0.85rem;
+        font-size: 0.75rem;
     }
 
     .search-bar {
@@ -563,16 +568,25 @@ body.sidebar-open .nav-toggle span:nth-child(3) {
 @media (max-width: 47.9375rem) {
     .home {
         flex-wrap: wrap;
+        gap: 0.35rem 0.4rem;
     }
 
     .logo img {
-        width: clamp(40px, 8vw, 44px);
-        height: auto;
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+
+    .right-header {
+        display: none !important;
     }
 
     .mobile-login {
         display: inline-flex;
         flex: 0 0 auto;
+        min-height: 2.25rem;
+        height: 2.25rem;
+        padding: 0 1rem;
+        font-size: 0.75rem;
     }
 
     .nav-toggle,
