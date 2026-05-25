@@ -323,16 +323,6 @@ body.sidebar-open .nav-toggle span:nth-child(3) {
     }
 }
 
-@media (min-width: 48rem) {
-    .box {
-        display: flex;
-    }
-
-    .second-divider {
-        display: block;
-    }
-}
-
 @media (min-width: 48rem) and (max-width: 63.9375rem) {
     .nav-toggle {
         display: none;
@@ -343,37 +333,12 @@ body.sidebar-open .nav-toggle span:nth-child(3) {
     }
 
     .search-bar {
-        flex: 1 1 20rem;
+        flex: 1 1 auto;
         width: auto;
     }
 }
 
-@media (min-width: 62rem) {
-    .nav-toggle {
-        display: none;
-    }
-
-    .mobile-login {
-        display: none !important;
-    }
-
-    .home {
-        flex-wrap: nowrap;
-    }
-
-    .search-bar {
-        flex: 1 1 25rem;
-        width: auto;
-    }
-}
-
-@media (min-width: 75rem) {
-    .home {
-        padding-inline: 0.875rem;
-    }
-}
-
-@media (min-width: 64rem) {
+@media (min-width: 1024px) {
     .top {
         padding: 16px 16px 0;
     }
@@ -385,9 +350,43 @@ body.sidebar-open .nav-toggle span:nth-child(3) {
         padding: 0.5rem 0.75rem;
     }
 
+    .nav-toggle {
+        display: none;
+    }
+
+    .mobile-login {
+        display: none !important;
+    }
+
+    .home {
+        flex-wrap: nowrap;
+        padding-inline: 0.875rem;
+    }
+
+    .right-header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+        gap: 0.75rem;
+        margin-left: auto;
+        min-width: 0;
+    }
+
+    .sidebar-actions {
+        display: none;
+    }
+
     .logo img {
         width: 42px;
         height: 42px;
+    }
+
+    .icon-circle.home-button {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: #1f1f1f;
     }
 
     .icon-circle {
@@ -399,6 +398,7 @@ body.sidebar-open .nav-toggle span:nth-child(3) {
         height: 48px;
         border-radius: 24px;
         flex: 1 1 auto;
+        max-width: 520px;
         padding: 0 0.875rem;
     }
 
@@ -408,6 +408,108 @@ body.sidebar-open .nav-toggle span:nth-child(3) {
 
     .right-header {
         gap: 0.5rem;
+    }
+
+    .box {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .box a {
+        font-size: 14px;
+        font-weight: 700;
+        color: #ffffff;
+        padding: 0;
+        transition: color 0.2s ease;
+    }
+
+    .box a:hover {
+        color: #1ed760;
+        transform: none;
+    }
+
+    .second-divider {
+        display: block;
+        width: 1px;
+        height: 24px;
+        background: rgba(255, 255, 255, 0.25);
+    }
+
+    .box2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        flex-wrap: nowrap;
+    }
+
+    .right-header .app {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        min-height: 48px;
+        padding: 0;
+        background: transparent;
+        color: #ffffff;
+        transition: color 0.2s ease;
+    }
+
+    .right-header .app img {
+        width: 0.95rem;
+        height: 0.95rem;
+    }
+
+    .right-header .app:hover {
+        color: #1ed760;
+        transform: none;
+    }
+
+    .right-header .sign {
+        min-width: 0;
+        justify-content: center;
+        color: #b3b3b3;
+        background: transparent;
+        padding: 0;
+    }
+
+    .right-header .sign:hover {
+        color: #ffffff;
+        background: transparent;
+    }
+
+    .right-header .sign p {
+        margin: 0;
+    }
+
+    .right-header .login {
+        background: transparent;
+        border: none;
+        padding: 0;
+    }
+
+    .right-header .login button {
+        height: 48px;
+        padding: 0 32px;
+        border-radius: 999px;
+        background: #ffffff;
+        color: #000000;
+        font-weight: 700;
+        border: none;
+        box-shadow: none;
+        transition: transform 0.2s ease;
+    }
+
+    .right-header .login button:hover {
+        background: #ffffff;
+        transform: scale(1.04);
+        box-shadow: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .home {
+        padding-inline: 0.875rem;
     }
 }
 
@@ -487,20 +589,6 @@ body.sidebar-open .nav-toggle span:nth-child(3) {
 @media (min-width: 48rem) {
     .mobile-search-results {
         display: none !important;
-    }
-}
-
-@media (max-width: 20rem) {
-    .home {
-        gap: 0.4rem 0.5rem;
-    }
-
-    .search-bar input {
-        font-size: 0.9rem;
-    }
-
-    .box2 {
-        gap: 0.5rem;
     }
 }
 
