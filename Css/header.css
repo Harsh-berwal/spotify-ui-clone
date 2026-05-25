@@ -333,6 +333,21 @@ body.sidebar-open .nav-toggle span:nth-child(3) {
     }
 }
 
+@media (min-width: 48rem) and (max-width: 63.9375rem) {
+    .nav-toggle {
+        display: none;
+    }
+
+    .home {
+        flex-wrap: nowrap;
+    }
+
+    .search-bar {
+        flex: 1 1 20rem;
+        width: auto;
+    }
+}
+
 @media (min-width: 62rem) {
     .nav-toggle {
         display: none;

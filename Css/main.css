@@ -314,3 +314,26 @@
         grid-template-columns: repeat(auto-fit, minmax(8.75rem, 1fr));
     }
 }
+
+@media (min-width: 48rem) and (max-width: 63.9375rem) {
+    .right {
+        min-height: 100%;
+        height: 100%;
+        align-self: stretch;
+    }
+
+    .spotify-playlist {
+        flex: 1 1 auto;
+        min-height: 100%;
+    }
+
+    .playbar {
+        margin-top: auto;
+    }
+
+    .trending-row,
+    .card-container,
+    .recent-list {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+}
