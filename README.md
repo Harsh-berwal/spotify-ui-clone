@@ -68,15 +68,9 @@ Through this project I practiced:
 
 ---
 
-### Mobile View
+### Mobile View && Mobile Sidebar
 
 ![Mobile View](./screenshots/mobile-home.png)
-
----
-
-### Mobile Sidebar
-
-![Mobile Sidebar](./screenshots/mobile-sidebar.png)
 
 ---
 
