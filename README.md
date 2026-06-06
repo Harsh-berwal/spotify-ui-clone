@@ -8,7 +8,7 @@ This project was created to strengthen my frontend development skills by practic
 
 ## 🌐 Live Demo
 
-👉 https://harsh-berwal.github.io/spotify-ui-clone/
+👉 https://spotify-ui-clone-fgqytkd78-harsh-berwals-projects.vercel.app/
 
 ---
 
